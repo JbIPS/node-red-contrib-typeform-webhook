@@ -1,6 +1,6 @@
 {
   "name": "red-contrib-typeform-webhook",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A NodeRED node that receive new Typeform submission a output an opiniated object",
   "main": "index.js",
   "scripts": {
