@@ -1,0 +1,34 @@
+<script type="text/javascript">
+  RED.nodes.registerType('typeform-webhook',{
+    category: 'input',
+    color: '#a6bbcf',
+    defaults: {
+      name: {value:""},
+			path: {
+				value: '/webhook',
+				required: true,
+				validate: (v) => v.startsWith('/')
+			}
+    },
+    inputs:0,
+    outputs:1,
+    icon: "arrow-in.png",
+    label: function() {
+      return this.name||"Typeform";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="typeform-webhook">
+  <div class="form-row">
+		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+		<label for="node-input-path"><i class="icon-globe"></i> Path</label>
+		<input type="text" id="node-input-path" placeholder="Path">
+	</div>
+</script>
+
+<script type="text/x-red" data-help-name="typeform-webhook">
+  <p>A simple node that converts the message payloads into all typeform-webhook characters</p>
+</script>
+
