@@ -20,6 +20,7 @@ module.exports = function(RED) {
 			};
 			this.warn(payload);
 			this.send({payload});
+			this.warn('Sent');
 			return res.send('OK');
 		});
 	}
